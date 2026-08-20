@@ -1,5 +1,7 @@
 # Priorizador de Features — Contexto del proyecto
 
+> Última actualización: 2026-08-19
+
 ## Qué es este proyecto
 
 Una app de gestión y priorización de features para equipos de producto.
