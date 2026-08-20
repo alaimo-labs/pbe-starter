@@ -1,26 +1,31 @@
 import Image from "next/image";
+import { FeatureBoard } from "@/components/feature-board";
 
 export default function Home() {
   return (
-    <main className="flex flex-1 flex-col items-center justify-center gap-10 bg-white p-8 dark:bg-zinc-950">
-      <Image
-        src="/alaimo-labs-logo.svg"
-        alt="Alaimo Labs"
-        width={220}
-        height={31}
-        priority
-        className="dark:invert"
-      />
-      <h1 className="text-4xl font-bold text-zinc-900 dark:text-zinc-50">
-        Hola, bienvenida/o 👋
-      </h1>
-      <p className="max-w-md text-center text-zinc-600 dark:text-zinc-400">
-        Este es tu punto de partida para{" "}
-        <span className="font-medium text-zinc-900 dark:text-zinc-100">
-          Product Building Essentials
-        </span>
-        . Si estás viendo esta página, tu entorno funciona.
-      </p>
+    <main className="flex-1 bg-zinc-50 dark:bg-zinc-900">
+      <div className="mx-auto w-full max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
+        <header className="mb-8 flex items-start justify-between gap-4">
+          <div>
+            <h1 className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
+              Priorizador de Features
+            </h1>
+            <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+              Captura ideas y puntúalas con RICE. Por ahora los datos viven en
+              memoria: se pierden al recargar la página.
+            </p>
+          </div>
+          <Image
+            src="/alaimo-labs-logo.svg"
+            alt="Alaimo Labs"
+            width={140}
+            height={20}
+            priority
+            className="mt-1 hidden shrink-0 sm:block dark:invert"
+          />
+        </header>
+        <FeatureBoard />
+      </div>
     </main>
   );
 }
